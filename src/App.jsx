@@ -4,6 +4,8 @@ import RootLayout from './pages/RootLayout';
 import DisneyPage from './pages/DisneyPage';
 import HomePage from './pages/HomePage';
 
+import { loader as disneyLoader } from './util/loader';
+
 import './App.css';
 
 const router = createBrowserRouter([
@@ -12,7 +14,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'game1', element: <DisneyPage /> },
+      { path: 'game1', element: <DisneyPage />, loader: disneyLoader },
     ],
   },
 ]);

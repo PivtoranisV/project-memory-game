@@ -1,5 +1,11 @@
+import { useLoaderData } from 'react-router-dom';
+import CardsList from '../components/CardList/CardsList';
+
 const DisneyPage = () => {
-  return <div>DisneyPage</div>;
+  const data = useLoaderData();
+  const loadedData = data.data;
+
+  return <CardsList data={loadedData} />;
 };
 
 export default DisneyPage;
