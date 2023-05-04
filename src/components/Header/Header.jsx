@@ -1,17 +1,19 @@
+import styles from './Header.module.css';
+
 const Header = () => {
   return (
-    <header>
+    <header className={styles.container}>
       <h1>Memory Game</h1>
-      <nav>
-        <ul>
+      <nav className={styles.navigation}>
+        <ul className={styles.list}>
           <li>
-            <a href="#">Game 1</a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">Game 2</a>
+            <a href="#">Disney Game</a>
           </li>
           <li>
-            <a href="#">Game 3</a>
+            <a href="#">About</a>
           </li>
         </ul>
       </nav>
