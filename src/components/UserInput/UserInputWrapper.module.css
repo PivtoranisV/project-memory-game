@@ -1,0 +1,18 @@
+.container {
+    position: absolute;
+    top: 35%;
+    background-image: repeating-radial-gradient(var(--color-secondary-200), var(--color-secondary));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    width: 95%;
+    margin: auto;
+    border-radius: 14px;
+    color: var(--color-primary);
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}

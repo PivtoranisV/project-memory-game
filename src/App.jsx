@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import { loader as disneyLoader } from './util/loader';
 
 import './App.css';
+import UserInput from './components/UserInput/UserInput';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
+      { path: 'setup', element: <UserInput /> },
       { path: 'game1', element: <DisneyPage />, loader: disneyLoader },
     ],
   },

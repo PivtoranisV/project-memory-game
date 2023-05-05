@@ -13,7 +13,7 @@ const Header = () => {
             <a href="#">Disney Game</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#">Game setup</a>
           </li>
         </ul>
       </nav>
