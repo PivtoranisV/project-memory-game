@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.container h2 {
+    box-shadow: 0 2px 8px var(--color-primary);
+    border-radius: 14px;
+    padding: 0.5rem;
+}
+
+.score {
+    padding: 0.5rem;
+}
