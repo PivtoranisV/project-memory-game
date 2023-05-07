@@ -6,7 +6,6 @@ import HomePage from './pages/HomePage';
 
 import { loader as disneyLoader } from './util/loader';
 
-import './App.css';
 import UserInput from './components/UserInput/UserInput';
 
 const router = createBrowserRouter([

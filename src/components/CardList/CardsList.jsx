@@ -1,6 +1,13 @@
 import styles from './CardList.module.css';
+import { useSelector } from 'react-redux';
 
 const CardsList = ({ data }) => {
+  const topic = useSelector((state) => state.input.topic);
+  const level = useSelector((state) => state.input.level);
+
+  console.log(topic);
+  console.log(level);
+
   return (
     <>
       <ul className={styles['cards-grid']}>

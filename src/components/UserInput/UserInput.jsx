@@ -1,4 +1,7 @@
 import { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { inputAction } from '../../store/userInput-slice';
 
 import UserInputWrapper from './UserInputWrapper';
 
@@ -11,6 +14,8 @@ const UserInput = () => {
   const topicRef = useRef();
   const levelRef = useRef();
   const pageRef = useRef();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleModal = () => {
     setInvalidInput(null);
@@ -21,6 +26,7 @@ const UserInput = () => {
     const enteredTopic = topicRef.current.value;
     const enteredLevel = levelRef.current.value;
     const enteredPage = pageRef.current.value;
+
     if (
       enteredTopic.trim() === '' ||
       enteredLevel.trim() === '' ||
@@ -33,8 +39,8 @@ const UserInput = () => {
       });
       return;
     }
-
-    console.log(enteredLevel, enteredPage, enteredTopic);
+    dispatch(inputAction.getInput({ enteredTopic, enteredLevel, enteredPage }));
+    navigate('/game1');
   };
 
   return (
