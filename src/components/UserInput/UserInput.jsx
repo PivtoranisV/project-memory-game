@@ -4,6 +4,7 @@ import UserInputWrapper from './UserInputWrapper';
 
 import styles from './UserInput.module.css';
 import Modal from '../UI/Modal';
+import Button from '../UI/Button';
 
 const UserInput = () => {
   const [invalidInput, setInvalidInput] = useState(null);
@@ -66,7 +67,7 @@ const UserInput = () => {
           </div>
         </div>
         <div className={styles['form-actions']}>
-          <button>Play</button>
+          <Button>Play</Button>
         </div>
       </form>
     </UserInputWrapper>

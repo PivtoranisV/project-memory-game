@@ -1,3 +1,4 @@
+import Button from './Button';
 import styles from './Modal.module.css';
 
 const Modal = (props) => {
@@ -12,7 +13,7 @@ const Modal = (props) => {
           <p>{props.message}</p>
         </div>
         <footer className={styles.actions}>
-          <button onClick={props.onConfirm}>Okay</button>
+          <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </div>
     </div>
