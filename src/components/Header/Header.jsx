@@ -1,4 +1,5 @@
 import styles from './Header.module.css';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -7,13 +8,34 @@ const Header = () => {
       <nav className={styles.navigation}>
         <ul className={styles.list}>
           <li>
-            <a href="#">Home</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href="#">Disney Game</a>
+            <NavLink
+              to="/game"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              New Game
+            </NavLink>
           </li>
           <li>
-            <a href="#">Game setup</a>
+            <NavLink
+              to="setup"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              Game Setup
+            </NavLink>
           </li>
         </ul>
       </nav>

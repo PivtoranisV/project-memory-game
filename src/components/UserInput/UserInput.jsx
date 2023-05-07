@@ -40,7 +40,7 @@ const UserInput = () => {
       return;
     }
     dispatch(inputAction.getInput({ enteredTopic, enteredLevel, enteredPage }));
-    navigate('/game1');
+    navigate('/game');
   };
 
   return (

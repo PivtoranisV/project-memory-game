@@ -1,0 +1,12 @@
+.card {
+    background-color: var(--color-primary);
+    border-radius: 14px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+.card-image img {
+    width: 100%;
+    height: auto;
+}

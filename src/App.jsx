@@ -1,12 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import RootLayout from './pages/RootLayout';
-import DisneyPage from './pages/DisneyPage';
 import HomePage from './pages/HomePage';
 
-import { loader as disneyLoader } from './util/loader';
-
 import UserInput from './components/UserInput/UserInput';
+import GamePage from './pages/GamePage';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'setup', element: <UserInput /> },
-      { path: 'game1', element: <DisneyPage />, loader: disneyLoader },
+      { path: 'game', element: <GamePage /> },
     ],
   },
 ]);
