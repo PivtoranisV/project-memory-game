@@ -8,7 +8,7 @@
 
 .fallback {
     text-align: center;
-    color: var(--color-primary)
+    color: var(--color-primary-200)
 }
 
 .fallback h1 {

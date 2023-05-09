@@ -13,9 +13,9 @@
 
   --color-primary: #fffeee;
   --color-secondary: #2e3249;
-
-  --color-secondary-200: #082623;
-
+  --color-primary-200: #fffbb6;
+  --color-secondary-200: #445097;
+  --color-secondary-300: #6d81f6;
   --color-shadow: #000000bf;
 }
 

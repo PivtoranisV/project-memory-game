@@ -1,5 +1,7 @@
+import Content from '../components/GameRules/Content';
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return <Content />;
 };
 
 export default HomePage;
