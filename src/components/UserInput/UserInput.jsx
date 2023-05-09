@@ -68,8 +68,8 @@ const UserInput = () => {
             <input type="number" id="level" min="7" max="30" ref={levelRef} />
           </div>
           <div className={styles['form-control']}>
-            <label htmlFor="level">Lucky Number (1-100)</label>
-            <input type="number" id="level" min="1" max="100" ref={pageRef} />
+            <label htmlFor="page">Lucky Number (1-100)</label>
+            <input type="number" id="page" min="1" max="100" ref={pageRef} />
           </div>
         </div>
         <div className={styles['form-actions']}>
