@@ -28,7 +28,6 @@ const CardsList = () => {
         throw new Error('Something went wrong');
       }
       const data = await response.json();
-      console.log(data.results);
       setCards(data.results);
     } catch (error) {
       setError(error.message);
@@ -40,38 +39,46 @@ const CardsList = () => {
     getData();
   }, [getData]);
 
-  return (
-    <>
-      {!isLoading && cards.length === 0 && (
-        <div className={styles.fallback}>
-          <h1>Please, setup your game</h1>
-          <Button onClick={handleNavigation}>Setup game</Button>
-        </div>
-      )}
-      {isLoading && <h1 className={styles.fallback}>Loading...</h1>}
-      {!isLoading && error && <h1 className={styles.fallback}>{error}</h1>}
-      {!isLoading && (
-        <div>
-          <ul>
-            <li>
-              Game Topic:{' '}
-              {topic[0].toUpperCase() + topic.slice(1).toLowerCase()}
-            </li>
-            <li>Game Level: Memorize {level} images</li>
-          </ul>
-          <ul className={styles['cards-grid']}>
-            {cards.map((card) => (
-              <CardItem
-                key={card.id}
-                image={card.urls.regular}
-                description={card.alt_description}
-              />
-            ))}
-          </ul>
-        </div>
-      )}
-    </>
-  );
+  let content;
+
+  if (!isLoading && cards.length === 0) {
+    content = (
+      <div className={styles.fallback}>
+        <h1>Please, setup your game</h1>
+        <Button onClick={handleNavigation}>Setup game</Button>
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    content = <h1 className={styles.fallback}>Loading...</h1>;
+  }
+
+  if (!isLoading && cards.length !== 0) {
+    content = (
+      <div>
+        <ul>
+          <li>Game Topic: {topic}</li>
+          <li>Game Level: Memorize {level} images</li>
+        </ul>
+        <ul className={styles['cards-grid']}>
+          {cards.map((card) => (
+            <CardItem
+              key={card.id}
+              image={card.urls.regular}
+              description={card.alt_description}
+            />
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  if (!isLoading && error) {
+    content = <h1 className={styles.fallback}>{error}</h1>;
+  }
+
+  return <>{content}</>;
 };
 
 export default CardsList;

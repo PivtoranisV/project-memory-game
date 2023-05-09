@@ -5,7 +5,9 @@ const userInputSlice = createSlice({
   initialState: { topic: '', level: '', page: '' },
   reducers: {
     getInput(state, action) {
-      state.topic = action.payload.enteredTopic;
+      state.topic =
+        action.payload.enteredTopic[0].toUpperCase() +
+        action.payload.enteredTopic.slice(1).toLowerCase();
       state.level = action.payload.enteredLevel;
       state.page = action.payload.enteredPage;
     },
