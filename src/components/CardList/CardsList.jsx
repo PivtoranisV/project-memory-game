@@ -49,7 +49,7 @@ const CardsList = () => {
     }
     setCards(shuffled);
 
-    dispatch(gameAction.click({ id }));
+    dispatch(gameAction.click({ id, level }));
   };
 
   let content;
