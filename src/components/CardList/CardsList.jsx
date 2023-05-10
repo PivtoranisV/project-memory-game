@@ -1,9 +1,10 @@
 import { useEffect, useState, useCallback } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CardItem from './CardItem';
 import Button from '../UI/Button';
 import styles from './CardList.module.css';
+import { gameAction } from '../../store/game-slice';
 
 const CardsList = () => {
   const [cards, setCards] = useState([]);
@@ -11,6 +12,7 @@ const CardsList = () => {
   const [error, setError] = useState(null);
   const { topic, level, page } = useSelector((state) => state.input);
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleNavigation = () => {
@@ -39,13 +41,15 @@ const CardsList = () => {
     getData();
   }, [getData]);
 
-  const handleShuffle = (array) => {
-    const shuffled = array.slice();
+  const handleShuffle = (id) => {
+    const shuffled = cards.slice();
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     setCards(shuffled);
+
+    dispatch(gameAction.click({ id }));
   };
 
   let content;
@@ -74,9 +78,10 @@ const CardsList = () => {
           {cards.map((card) => (
             <CardItem
               key={card.id}
+              id={card.id}
               image={card.urls.regular}
               description={card.alt_description}
-              onShuffle={() => handleShuffle(cards)}
+              onShuffle={handleShuffle}
             />
           ))}
         </ul>
