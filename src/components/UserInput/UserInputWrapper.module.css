@@ -1,6 +1,4 @@
 .container {
-    position: absolute;
-    top: 35%;
     background-image: repeating-radial-gradient(var(--color-secondary-200), var(--color-secondary));
     display: flex;
     flex-direction: column;

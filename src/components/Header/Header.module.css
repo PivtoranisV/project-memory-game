@@ -3,6 +3,7 @@
     background-color: var(--color-primary);
     background-image: repeating-radial-gradient(var(--color-primary), var(--color-secondary));
     color: var(--color-secondary);
+    box-shadow: 0 2px 8px var(--color-shadow);
     display: flex;
     justify-content: space-between;
     align-items: center;
