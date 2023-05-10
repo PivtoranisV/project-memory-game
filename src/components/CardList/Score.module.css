@@ -7,11 +7,13 @@
 }
 
 .container h2 {
-    box-shadow: 0 2px 8px var(--color-primary);
+    box-shadow: 0 2px 8px var(--color-secondary-300);
+    color: var(--color-primary-200);
     border-radius: 14px;
     padding: 0.5rem;
 }
 
 .score {
     padding: 0.5rem;
+    color: var(--color-secondary-300);
 }

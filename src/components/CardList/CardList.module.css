@@ -14,3 +14,23 @@
 .fallback h1 {
     margin: 2rem 0;
 }
+
+.setup {
+    padding: 1rem;
+    list-style: none;
+    font-size: 1.2rem;
+    color: var(--color-primary-200);
+    box-shadow: 0 2px 8px var(--color-secondary-300);
+    width: 300px;
+    margin: auto;
+    border-radius: 14px;
+}
+
+.setup li {
+    margin-bottom: 1.5rem;
+}
+
+.setup span {
+    color: var(--color-secondary-300);
+    margin-left: 0.5rem;
+}

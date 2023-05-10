@@ -4,7 +4,10 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <header className={styles.container}>
-      <h1>Memory Game</h1>
+      <h1>
+        Memory <br />
+        Game
+      </h1>
       <nav className={styles.navigation}>
         <ul className={styles.list}>
           <li>

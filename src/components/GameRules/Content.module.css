@@ -11,6 +11,8 @@
 }
 
 .title {
+    font-family: 'Sigmar',
+        cursive;
     font-size: 3rem;
     text-align: center;
     margin: 2rem auto;

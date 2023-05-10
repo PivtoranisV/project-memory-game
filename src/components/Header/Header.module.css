@@ -1,11 +1,12 @@
 .container {
+    font-family: 'Sigmar', cursive;
     background-color: var(--color-primary);
     background-image: repeating-radial-gradient(var(--color-primary), var(--color-secondary));
     color: var(--color-secondary);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0.5rem;
+    padding: 2rem 1.5rem;
     margin-bottom: 5rem;
 }
 

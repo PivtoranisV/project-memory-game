@@ -70,9 +70,13 @@ const CardsList = () => {
   if (!isLoading && cards.length !== 0) {
     content = (
       <div>
-        <ul>
-          <li>Game Topic: {topic}</li>
-          <li>Game Level: Memorize {level} images</li>
+        <ul className={styles.setup}>
+          <li>
+            Game Topic: <span>{topic}</span>
+          </li>
+          <li>
+            Game Level: <span>Memorize {level} images</span>
+          </li>
         </ul>
         <ul className={styles['cards-grid']}>
           {cards.map((card) => (
