@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2.5rem;
+    padding: 1.5rem;
     text-align: center;
     background-image: repeating-radial-gradient(var(--color-secondary-200), var(--color-secondary));
     color: var(--color-primary-200);
@@ -16,6 +16,7 @@
     font-size: 3rem;
     text-align: center;
     margin: 2rem auto;
+    color: var(--color-primary);
 }
 
 .title__ready,
@@ -54,12 +55,17 @@
 
 .subtitle {
     font-size: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0 1rem 0;
+    font-family: 'Sigmar', cursive;
+    text-align: center;
+    color: var(--color-primary);
 }
 
 .text {
     max-width: 800px;
-    line-height: 1.5;
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 1.5rem;
 }
 
 .link {
@@ -70,5 +76,5 @@
 }
 
 .link:hover {
-    color: var(--color-secondary-200);
+    color: var(--color-primary);
 }

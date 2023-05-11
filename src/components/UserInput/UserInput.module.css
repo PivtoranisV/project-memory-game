@@ -15,8 +15,8 @@
 }
 
 .form-control label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--color-primary-200);
 }
 
 .form-control input,
