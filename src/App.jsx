@@ -5,11 +5,13 @@ import HomePage from './pages/HomePage';
 
 import UserInput from './components/UserInput/UserInput';
 import GamePage from './pages/GamePage';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
       { path: 'setup', element: <UserInput /> },
